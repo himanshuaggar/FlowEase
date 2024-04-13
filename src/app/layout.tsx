@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import "./globals.css";
 import { ClerkProvider } from '@clerk/nextjs'
 import ModalProvider from "@/providers/modal-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,9 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <ModalProvider>
+
         {children}
+        <Toaster />
         </ModalProvider>
         </ThemeProvider>
         </body>
