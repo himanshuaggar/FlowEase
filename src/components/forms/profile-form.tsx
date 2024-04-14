@@ -34,9 +34,9 @@ function ProfileForm({ user, onUpdate }: Props) {
     setIsLoading(false)
   }
 
-//   useEffect(() => {
-//     form.reset({ name: user.name, email: user.email })
-//   }, [user])
+  useEffect(() => {
+    form.reset({ name: user.name, email: user.email })
+  }, [user])
 
     return (
         <Form {...form}>
